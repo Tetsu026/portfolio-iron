@@ -19,8 +19,7 @@ const About = () => {
             <div className="space-y-8 text-center">
               <p className="text-xl text-gray-300 leading-relaxed">
                 Sou <span className="text-yellow-400 font-semibold">Iron Cruz de Jesus</span>, 
-                editor de vídeo com mais de <span className="text-red-400 font-semibold">5 anos de experiência</span> 
-                em projetos audiovisuais para criadores de conteúdo, empresas e campanhas comerciais.
+                editor de vídeo com mais de <span className="text-red-400 font-semibold">5 anos de experiência</span> em projetos audiovisuais para criadores de conteúdo, empresas e campanhas comerciais.
               </p>
 
               <p className="text-xl text-gray-300 leading-relaxed">

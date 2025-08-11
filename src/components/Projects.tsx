@@ -45,12 +45,12 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Edição Criativa',
-      description: 'Projeto autoral com foco em transições e efeitos visuais avançados.',
-      techniques: 'transições dinâmicas, color grading intenso, efeitos gráficos',
-      videoUrl: 'https://www.youtube.com/watch?v=ngppVgACfBI',
-      thumbnail: 'https://i.imgur.com/Aavjm8b_d.webp?maxwidth=760&fidelity=grand',
-      category: 'Autoral',
+      title: 'Vlog de Viagem',
+      description: 'Edição dinâmica capturando paisagens, emoções e momentos únicos da jornada.',
+      techniques: 'transições suaves, correção de cor, ambientação sonora e ritmo envolvente',
+      videoUrl: 'https://www.youtube.com/watch?v=JCI661NxRJM',
+      thumbnail: 'https://img.youtube.com/vi/JCI661NxRJM/maxresdefault.jpg',
+      category: 'Vlog',
       gradient: 'from-yellow-500 to-yellow-600'
     },
     {
@@ -82,7 +82,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="group relative bg-black rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl border border-gray-800 hover:border-gray-600"
@@ -98,17 +98,14 @@ const Projects = () => {
                     target.src = 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=600';
                   }}
                 />
-                
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
                 </div>
-
                 {/* Category Badge */}
                 <div className={`absolute top-4 left-4 px-3 py-1 bg-gradient-to-r ${project.gradient} text-white text-sm font-semibold rounded-full`}>
                   {project.category}
@@ -120,11 +117,9 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
-
                 {/* Techniques */}
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
@@ -137,7 +132,6 @@ const Projects = () => {
                     {project.techniques}
                   </p>
                 </div>
-
                 {/* Action Button */}
                 <a
                   href={project.videoUrl}
